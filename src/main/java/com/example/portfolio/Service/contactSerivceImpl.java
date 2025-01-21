@@ -34,9 +34,9 @@ public class contactSerivceImpl implements contactSerivce {
         mailSender.send(message);
 
         SimpleMailMessage message1 = new SimpleMailMessage();
-        message1.setTo("pandyajay561@gmail.com" +contactmodel.getName());
-        message1.setSubject("Thank you for contact" +contactmodel.getCompany() +contactmodel.getPhone());
-        message1.setText("Thank you for contact" +contactmodel.getEmail() +contactmodel.getMessage());
+        message1.setTo("pandyajay561@gmail.com");
+        message1.setSubject("Thank you for contact");
+        message1.setText("Thank you for contact" + " \n" +"Name:"+ contactmodel.getName() + " \n " + "Company:" + contactmodel.getCompany() + " \n" + "Phone:" + contactmodel.getPhone()+  " \n " +"Email:" + contactmodel.getEmail() +  " \n " +"Message:" + contactmodel.getMessage());
         mailSender.send(message1);
 
         return "Created successfully";
